@@ -77,3 +77,27 @@ body {
   margin: 7px 0;
   font-size: 16px;
 }
+
+/* Route Links */
+.route-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.route-card {
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.route-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.13);
+}
+
+.view-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: teal;
+  font-weight: bold;
+}

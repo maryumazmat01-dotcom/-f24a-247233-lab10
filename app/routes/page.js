@@ -1,4 +1,5 @@
 
+import Link from 'next/link';
 import routes from '../routes';
 
 export default function RoutesPage() {
@@ -8,13 +9,23 @@ export default function RoutesPage() {
 
       <div className="routes-list">
         {routes.map((bus) => (
-          <div className="route-card" key={bus.id}>
-            <h3>Route {bus.id}</h3>
+          <Link
+            href={`/routes/${bus.id}`}
+            key={bus.id}
+            className="route-link"
+          >
+            <div className="route-card">
+              <h3>Route {bus.id}</h3>
 
-            <p>Destination: {bus.city}</p>
-            <p>Departure: {bus.time}</p>
-            <p>Seat Price: Rs. {bus.price}</p>
-          </div>
+              <p>Destination: {bus.city}</p>
+              <p>Departure: {bus.time}</p>
+              <p>Seat Price: Rs. {bus.price}</p>
+
+              <span className="view-link">
+                View Route →
+              </span>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
