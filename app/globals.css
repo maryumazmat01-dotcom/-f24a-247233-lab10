@@ -1,4 +1,5 @@
 
+/* General Styling */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ body {
   color: #222;
 }
 
+/* Header Styling */
 .header {
   background-color: teal;
   color: white;
@@ -22,15 +24,56 @@ body {
   font-size: 28px;
 }
 
+/* Main Content */
 .main-content {
   min-height: 75vh;
   padding: 35px 20px;
 }
 
+/* Footer Styling */
 .footer {
   background-color: teal;
   color: white;
   text-align: center;
   padding: 18px;
+  font-size: 16px;
+}
+
+/* Routes Page */
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  color: teal;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Routes List */
+.routes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Individual Route Cards */
+.route-card {
+  background-color: white;
+  padding: 22px;
+  border-radius: 10px;
+  border-left: 6px solid teal;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.route-card h3 {
+  color: teal;
+  margin-bottom: 12px;
+}
+
+.route-card p {
+  margin: 7px 0;
   font-size: 16px;
 }
