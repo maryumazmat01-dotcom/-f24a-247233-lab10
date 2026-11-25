@@ -39,42 +39,48 @@ body {
   font-size: 16px;
 }
 
-/* Routes Page */
+/* Common Container */
 .container {
-  max-width: 750px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
+/* Page Heading */
 .page-title {
   text-align: center;
   color: teal;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   font-size: 28px;
 }
 
-/* Routes List */
+/* Horizontal Routes Layout */
 .routes-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
 }
 
 /* Individual Route Cards */
 .route-card {
+  height: 100%;
   background-color: white;
   padding: 22px;
   border-radius: 10px;
   border-left: 6px solid teal;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .route-card h3 {
   color: teal;
   margin-bottom: 12px;
+  font-size: 20px;
 }
 
 .route-card p {
-  margin: 7px 0;
+  margin: 10px 0;
   font-size: 16px;
 }
 
@@ -83,11 +89,6 @@ body {
   text-decoration: none;
   color: inherit;
   display: block;
-}
-
-.route-card {
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .route-card:hover {
@@ -124,6 +125,7 @@ body {
   font-size: 17px;
 }
 
+/* Back Button */
 .back-link {
   display: inline-block;
   margin-top: 20px;
@@ -136,4 +138,23 @@ body {
 
 .back-link:hover {
   background-color: #006666;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+  .routes-list {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .header h1 {
+    font-size: 23px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
 }
